@@ -34,9 +34,9 @@
     console.log(x)
 
 
-    // This will not give error;
-    alert(name);
-    var name = "Nagmani";
+    // // This will not give error;
+    // alert(name);
+    // var name = "Nagmani";
 
     // // This will give error; Variables defined with const are also hoisted to the top, but not initialized. Meaning: Using a const variable before it is declared will result in a ReferenceError:
     // alert(name);
@@ -45,6 +45,28 @@
     function alt() {
         alert("Hi");
     }
+
+    let y = "5";
+    let z = 5;
+    console.log(typeof(y));
+    console.log(typeof z);
+    
+
+    class Person{
+        constructor(name, age){
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    p1 = new Person("Nagmani", 22);
+    console.log(p1 instanceof Person);
+    // console.log(p1.age); 
+
+    const car = {type:"Fiat", model:"500", color:"white"};
+    // It is a common practice to declare objects with the const keyword.
+
+
 </script>
 
 </html>
