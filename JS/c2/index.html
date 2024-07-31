@@ -10,6 +10,7 @@
 
 <body>
     <h1>Hoisting</h1>
+    <button id="btn" onclick="alt()">click</button>
 </body>
 <script>
     console.log(myVar); // undefined
@@ -37,9 +38,13 @@
     alert(name);
     var name = "Nagmani";
 
-    // This will give error;
-    alert(name);
-    const name = "Nagmani";
+    // // This will give error; Variables defined with const are also hoisted to the top, but not initialized. Meaning: Using a const variable before it is declared will result in a ReferenceError:
+    // alert(name);
+    // const name = "Nagmani";
+
+    function alt() {
+        alert("Hi");
+    }
 </script>
 
 </html>
