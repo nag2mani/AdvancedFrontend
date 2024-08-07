@@ -57,9 +57,13 @@ const person = {
     age: 50,
     eyeColor: "blue"
   };
-
 console.log(person.firstName);
-console.log(person.lastName);
+console.log(person["age"]);
+
+// Create a copy
+const x1 = person;
+console.log(x1.firstName);
+console.log(x1["age"]);
 
 
 // Create an Object and add their properties(It is similar as above);
@@ -67,5 +71,21 @@ const person1 = new Object();
 person.name = "John";
 person.age = 50;
 person.eyeColor = "blue";
+
+
+//nested object;
+myObj = {
+    name:"John",
+    age:30,
+    myCars: {
+      car1:"Ford",
+      car2:"BMW",
+      car3:"Fiat"
+    }
+  }
+console.log(myObj.myCars.car2)
+
+
+
 
 
