@@ -60,3 +60,12 @@ const person = {
 
 console.log(person.firstName);
 console.log(person.lastName);
+
+
+// Create an Object and add their properties(It is similar as above);
+const person1 = new Object();
+person.name = "John";
+person.age = 50;
+person.eyeColor = "blue";
+
+
