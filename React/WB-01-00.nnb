@@ -467,7 +467,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 4: Passing array elements as function arguments\n\nconst numbers = [1, 2, 3];\nfunction add(a, b, c) {\n  return a + b + c;\n}\nconsole.log(add(...numbers));"
+                "// Example 4: Passing array elements as function arguments\n\nconst numbers = [1, 2, 3, 4];\n\nfunction add(a, b, c , d) {\n  return a + b + c + d;\n}\n\nconsole.log(add(...numbers));"
             ],
             "outputs": [
                 {
@@ -475,7 +475,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "6",
+                                "10",
                                 ""
                             ]
                         }
@@ -646,30 +646,78 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 1: A simple arrow function to add two numbers\n\nconst add = (a, b) => a + b;\nconsole.log(add(2, 3));"
+                "// Example 1: A simple arrow function to add two numbers\n\nlet add = (a, b) => a + b;\nconsole.log(add(2, 44));"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "46",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "//Example 2: Arrow Function with No Parameters that returns a greeting message\n\nconst greet = () => 'Hello, World!';\nconsole.log(greet()); // Output: Hello, World!\n\n// When there are no parameters, empty parentheses () are used."
+                "//Example 2: Arrow Function with No Parameters that returns a greeting message\n\nconst greet = () => 'Hello, World!';\nconsole.log(greet());\n\n// When there are no parameters, empty parentheses () are used."
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello, World!",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
                 "// Example 3: Arrow Function with One Parameter\n\nconst square = x => x * x;\nconsole.log(square(4));\n\n// When there is a single parameter, parentheses around the parameter can be omitted."
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "16",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Example 4: Arrow Function with a Block Body\n\nconst multiplyAndAdd = (a, b) => {\n    const product = a * b;\n    const sum = a + b;\n    return { product, sum };\n  };\n  console.log(multiplyAndAdd(2, 3)); // Output: { product: 6, sum: 5 }\n\n// When the function body contains multiple statements, curly braces {} are used, and an explicit return is needed."
+                "// Example 4: Arrow Function with a Block Body\n\nconst multiplyAndAdd = (a, b) => {\n    const product = a * b;\n    const sum = a + b;\n    return { product, sum };\n  };\n  console.log(multiplyAndAdd(2, 3));\n\n// When the function body contains multiple statements, curly braces {} are used, and an explicit return is needed."
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ product: 6, sum: 5 }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
@@ -753,14 +801,40 @@
             "source": [
                 "// Example 1: Creating a basic promise\n// This example demonstrates creating a simple promise that resolves after a delay.\n// A promise is an object representing the eventual completion or failure of an asynchronous operation. It can be in one of the following states: pending, fulfilled, or rejected.\n\nconst myPromise = new Promise((resolve, reject) => {\n    // Simulate an asynchronous operation using setTimeout\n    setTimeout(() => {\n      const success = true; // Change this to false to see the reject case\n      if (success) {\n        resolve('Promise resolved successfully!');\n      } else {\n        reject('Promise rejected.');\n      }\n    }, 2000); // 2 seconds delay\n  });\n  \n// Using the promise\nmyPromise\n    .then(result => {\n      console.log(result); // Output: Promise resolved successfully!\n    })\n    .catch(error => {\n      console.error(error); // Output: Promise rejected.\n    });\n\n/* Explanation:\n- A new Promise object is created. The executor function inside the Promise constructor takes two arguments: resolve and reject.\n- The setTimeout function simulates an asynchronous operation that takes 2 seconds. This asynchronous operation is wrapped inside the promise.\n- If the operation is successful (indicated by the success variable), the promise is resolved with a success message. Otherwise, the promise is rejected with an error message.\n- The .then() method handles the resolved case, and the .catch() method handles the rejected case.\n*/"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Promise resolved successfully!",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
                 "// Example 2: Chaining Promises\n// This example demonstrates chaining two promises to perform sequential asynchronous operations.\n\n// Function that returns a promise resolving after 1 second\nconst firstTask = () => {\n    return new Promise((resolve, reject) => {\n      setTimeout(() => {\n        console.log('First task completed');\n        resolve('First result');\n      }, 1000);\n    });\n  };\n  \n  // Function that returns a promise resolving after another 2 second\n  const secondTask = (firstResult) => {\n    return new Promise((resolve, reject) => {\n      setTimeout(() => {\n        console.log('Second task completed');\n        resolve(`${firstResult} -> Second result`);\n      }, 2000);\n    });\n  };\n  \n  // Chaining the promises\n  firstTask()\n    .then(result => {\n      console.log(result); // Output: First result\n      return secondTask(result);\n    })\n    .then(finalResult => {\n      console.log(finalResult); // Output: First result -> Second result\n    })\n    .catch(error => {\n      console.error('An error occurred:', error);\n    });\n\n/* Explanation:\n- The firstTask function returns a promise that resolves after 1 second with a message “First result”.\n- The secondTask function takes the result of the first task as an argument and returns a promise that resolves after another 1 second with a message that includes the result of the first task.\n- The firstTask() is called, and its result is passed to secondTask() using the .then() method.\n- The final result of the chain is logged to the console in the second .then() method.\n*/\n\n// Note: Some console.log statements may not print in .nnb environment. Try this code code snippet in https://playcode.io/javascript\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "First task completed",
+                                "First result",
+                                "First result -> Second result",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "typescript",
