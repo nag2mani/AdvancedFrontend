@@ -486,30 +486,78 @@
         {
             "language": "javascript",
             "source": [
-                "// Exercise 1: Using Spread Syntax with Arrays\n// 1.\tCreate an array called fruits containing “apple”, “banana”, and “orange”.\n// 2.\tCreate another array called moreFruits and use the spread syntax to include all elements from fruits and add “grape” and “kiwi” to it."
+                "// Exercise 1: Using Spread Syntax with Arrays\n// 1.\tCreate an array called fruits containing “apple”, “banana”, and “orange”.\n// 2.\tCreate another array called moreFruits and use the spread syntax to include all elements from fruits and add “grape” and “kiwi” to it.\n\nlet fruit = [\"apple\", \"banana\", \"orange\"]\nlet moreFruits = [\"grape\", \"kiwi\"]\nlet all_fruit = [...fruit, ...moreFruits]\nconsole.log(all_fruit)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'apple', 'banana', 'orange', 'grape', 'kiwi' ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 2: Using Spread Syntax with Objects\n// 1.\tCreate an object called person with properties name: \"John\" and age: 25.\n// 2.\tCreate another object called employee and use the spread syntax to include all properties from person and add a new property jobTitle: \"Developer\"."
+                "// Exercise 2: Using Spread Syntax with Objects\n// 1.\tCreate an object called person with properties name: \"John\" and age: 25.\n// 2.\tCreate another object called employee and use the spread syntax to include all properties from person and add a new property jobTitle: \"Developer\".\n\nlet person = {name : \"john\", age: 25}\nlet employee = {...person, jobTittle:\"Developer\"}\nconsole.log(employee)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ name: 'john', age: 25, jobTittle: 'Developer' }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 3: Cloning and Modifying Objects with Spread Syntax\n// 1.\tCreate an object called original with properties a: 1, b: 2, and c: 3.\n// 2.\tCreate a new object called clone that is a clone of original but with the property b changed to 20.\n"
+                "// Exercise 3: Cloning and Modifying Objects with Spread Syntax\n// 1.\tCreate an object called original with properties a: 1, b: 2, and c: 3.\n// 2.\tCreate a new object called clone that is a clone of original but with the property b changed to 20.\n\n\nlet original = {a:1, b:2, c:3}\nlet clone = {...original, b:20, b:50} //It took latest one\n\nconsole.log(clone)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ a: 1, b: 50, c: 3 }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 4: Combining Objects with Spread Syntax\n\n// 1.   Create two objects, user with properties name: \"Alice\" and age: 30, and contact with properties email: \"alice@example.com\" and phone: \"123-456-7890\".\n// 2.\tCombine these objects into a new object called userInfo using the spread syntax."
+                "// Exercise 4: Combining Objects with Spread Syntax\n\n// 1.   Create two objects, user with properties name: \"Alice\" and age: 30, and contact with properties email: \"alice@example.com\" and phone: \"123-456-7890\".\n// 2.\tCombine these objects into a new object called userInfo using the spread syntax.\n\n\nlet user = {name: \"A\", age:23};\nlet contact = {email:\"kk@gmial.com\", mob:9898434433}\nlet userInfo = {...user, ...contact}\nconsole.log(userInfo)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ name: 'A', age: 23, email: 'kk@gmial.com', mob: 9898434433 }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
