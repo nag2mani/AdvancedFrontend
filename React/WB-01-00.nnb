@@ -134,7 +134,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Ternary operator: condition ? expr1 : expr2\n// If the condition is true, expr1 is returned, otherwise expr2 is returned\n\n// Example 1\nlet age = 20\nlet message = age >= 18 ? \"You are an adult\" : \"You are a child\"\nconsole.log(message)\n"
+                "// Ternary operator: condition ? expr1 : expr2\n// If the condition is true, expr1 is returned, otherwise expr2 is returned\n\n// Example 1\nlet age = 20;\nlet message = age >= 18 ? \"You are an adult\" : \"You are a child\";\nconsole.log(message);\n"
             ],
             "outputs": [
                 {
@@ -153,7 +153,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 2\nlet isRaining = true\nlet weather = isRaining ? \"It's raining\" : \"It's not raining\"\nconsole.log(weather)"
+                "// Example 2\nlet isRaining = true\nlet weather = isRaining ? \"It's raining\" : \"It's not raining\";\nconsole.log(weather)"
             ],
             "outputs": [
                 {
@@ -172,23 +172,59 @@
         {
             "language": "javascript",
             "source": [
-                "//Exercise 1: Write a ternary operator to check if a number is even or odd\n// Write your code here"
+                "//Exercise 1: Write a ternary operator to check if a number is even or odd\n// Write your code here\n\nlet num = 4;\nlet result = num%2==0 ? true : false;\nconsole.log(result)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "//Exercise 2: Write a ternary operator to check if a number is positive, negative or zero\n// Write your code here"
+                "//Exercise 2: Write a ternary operator to check if a number is positive, negative or zero\n// Write your code here\n\nlet num = -72;\nlet result = num != 0 ? (num > 0 ? \"Positive\" : \"Negative\") : \"Zero\";\nconsole.log(result)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Negative",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "//Exercise 3: Write a ternary operator to convert a number to a string with correct ordinal suffix, Ex. 1 -> 1st, 2 -> 2nd, 3 -> 3rd, 4 -> 4th, 5 -> 5th, etc.\n// Write your code here"
+                "//Exercise 3: Write a ternary operator to convert a number to a string with correct ordinal suffix, Ex. 1 -> 1st, 2 -> 2nd, 3 -> 3rd, 4 -> 4th, 5 -> 5th.\n// Write your code here\n\nlet num = 5;\nlet result = num!=5?(num!=4?(num!=3?(num!=2?(num== 1?\"1st\":\"Other than this\"):\"2nd\"):\"3rd\"):\"4th\"):\"5th\";\nconsole.log(result)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "5th",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -200,7 +236,7 @@
         {
             "language": "javascript",
             "source": [
-                "// The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.\n\n// Example 1\nconst person = { firstName: \"John\", age: 30 }\nconst { firstName, age } = person\nconsole.log(firstName)"
+                "// The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.\n\n// Example 1\nconst person = { firstName: \"John\", age: 30}\nconst { firstName, age} = person\nconsole.log(age)"
             ],
             "outputs": [
                 {
@@ -208,7 +244,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "John",
+                                "30",
                                 ""
                             ]
                         }
@@ -219,7 +255,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 2\nconst numbers = [1, 2, 3, 4, 5]\n\nconst [first, second, third] = numbers\n\nconsole.log(third)"
+                "// Example 2\nconst numbers = [1, 2, 5, 15, 1]\nconst [first, second, third] = numbers\nconsole.log(third)"
             ],
             "outputs": [
                 {
@@ -227,7 +263,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "3",
+                                "5",
                                 ""
                             ]
                         }
