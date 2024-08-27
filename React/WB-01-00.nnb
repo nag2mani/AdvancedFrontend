@@ -29,7 +29,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Complex console.log statement\nconsole.log(\"Hello, World!\", \"This is a complex console.log statement containg multiple arguments\", 3)\n\n// Complex console.log statement with variables\nlet place = \"World\"\nconsole.log(\"Hello, \" + place + \"!\")\n\n// Complex console.log statement with variables and string interpolation\nconsole.log(`Hello, ${place}!`)"
+                "// Complex console.log statement\nconsole.log(\"Hello, World!\", \"good to know\", 3)\n\n// Complex console.log statement with variables\nlet place = \"World\"\nconsole.log(\"Hello, \" + place + \"!\")\n\n// Complex console.log statement with variables and string interpolation\nconsole.log(`Hello, ${place}!`)"
             ],
             "outputs": [
                 {
@@ -37,7 +37,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Hello, World! This is a complex console.log statement containg multiple arguments 3",
+                                "Hello, World! good to know 3",
                                 "Hello, World!",
                                 "Hello, World!",
                                 ""
@@ -274,7 +274,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 3\n// Destructuring with skipping. In this example, we are skipping the second element in the array.\n// This code may not work in this notebook environment. You can try it in your local environment or an online code editor like https://www.jsplayground.dev/\n\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink'];\n\n// Destructuring with skipping\nlet [firstColor, , thirdColor] = colors;\n\nconsole.log(firstColor); // red\nconsole.log(thirdColor); // blue"
+                "// Example 3\n// Destructuring with skipping. In this example, we are skipping the second element in the array.\n// This code may not work in this notebook environment. You can try it in your local environment or an online code editor like https://www.jsplayground.dev/\n\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink'];\n\n// Destructuring with skipping\nlet [firstColor, ,thirdColor] = colors;  //here is , , see\n\nconsole.log(firstColor); // red\nconsole.log(thirdColor); // blue"
             ],
             "outputs": [
                 {
@@ -296,35 +296,101 @@
             "source": [
                 "// Example 4\n\nlet data = {\n    name: 'John Doe',\n    age: 30,\n    contact: {\n      email: 'john.doe@example.com',\n      phone: '123-456-7890',\n    },\n    hobbies: ['reading', 'gaming', 'coding'],\n  };\n  \n  // Destructuring\n  let { name, contact: { email, phone }, hobbies: [hobby1, hobby2] } = data;\n  \n  console.log(name); \n  console.log(email);\n  console.log(phone);\n  console.log(hobby1);\n  console.log(hobby2);\n\n  // You can also get email directly from data object by using data.contact.email\n  console.log(data.contact.email)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "John Doe",
+                                "john.doe@example.com",
+                                "123-456-7890",
+                                "reading",
+                                "gaming",
+                                "john.doe@example.com",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 1: Destructure the following object to get the value of the key \"title\"\nlet book = { title: \"JavaScript for Beginners\", author: \"John Doe\" }"
+                "// Exercise 1: Destructure the following object to get the value of the key \"title\"\nlet book = { title: \"JavaScript for Beginners\", author: \"John Doe\" }\nlet { title } = book;\nconsole.log(title)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "JavaScript for Beginners",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 2: Destructure the following object to get the value of the key \"color\"\nlet car = { make: \"Toyota\", model: \"Corolla\", color: \"red\" }"
+                "// Exercise 2: Destructure the following object to get the value of the key \"color\"\nlet car = { make: \"Toyota\", model: \"Corolla\", color: \"red\" }\nlet {color, make} = car;\nconsole.log(color)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "red",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 3: Destructure the following object to print Hello, John Doe! I have sent you an email at joh.doe@example.com\nlet person = { firstName: \"John\", lastName: \"Doe\", email: \"john.doe@example.com\" }"
+                "// Exercise 3: Destructure the following object to print Hello, John Doe! I have sent you an email at joh.doe@example.com\nlet person = { firstName: \"John\", lastName: \"Doe\", email: \"john.doe@example.com\" }\n// console.log(person.firstName)\nlet{firstName, lastName, email} = person;\nconsole.log(\"Hello,\",firstName,lastName, \"I have sent you an email at\", email)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello, John Doe I have sent you an email at john.doe@example.com",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 4: Destructure the list of colors to get the first and last color\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink']"
+                "// Exercise 4: Destructure the list of colors to get the first and last color\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink']\n\nlet [f, , , ,s] = colors;\n\nconsole.log(f)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Failed to generate code object, Cannot read properties of null (reading 'type')",
+                                "stack": ""
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -345,21 +411,58 @@
             "source": [
                 "// Example 1: Spreading elements of an array\n\nconst arr1 = [1, 2, 3];\nconst arr2 = [...arr1, 4, 5, 6];\nconsole.log(arr2);"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 1, 2, 3, 4, 5, 6 ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
                 "// Example 2: Combining arrays\n\nconst arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst combined = [...arr1, ...arr2];\nconsole.log(combined);"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 1, 2, 3, 4, 5, 6 ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
                 "// Example 3: Spreading properties of an object\n\nconst obj1 = { a: 1, b: 2 };\nconst obj2 = { ...obj1, c: 3 };\nconst obj3 = { d: 4, e: 5 };\nconst obj4 = { ...obj2, ...obj3 };\nconsole.log(obj2);\nconsole.log(obj4);"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ a: 1, b: 2, c: 3 }",
+                                "{ a: 1, b: 2, c: 3, d: 4, e: 5 }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
