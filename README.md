@@ -1,4 +1,4 @@
-# Advanced_Frontend
+# AdvancedFrontend
 
 This repository is dedicated to advanced frontend development, focusing on JavaScript (JS), TypeScript (TS), and popular frontend frameworks like React and Angular. It serves as a comprehensive collection of frontend resources, code samples, and projects.
 
