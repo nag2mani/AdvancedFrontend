@@ -29,7 +29,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Complex console.log statement\nconsole.log(\"Hello, World!\", \"good to know\", 3)\n\n// Complex console.log statement with variables\nlet place = \"World\"\nconsole.log(\"Hello, \" + place + \"!\")\n\n// Complex console.log statement with variables and string interpolation\nconsole.log(`Hello, ${place}!`)"
+                "// Complex console.log statement.\nconsole.log(\"Hello, World!\", \"good to know\", 3)\n\n// console.log statement with \"string concatenation using +\".\nlet place = \"World\"\nconsole.log(\"Hello, \" + place + \"!\")\n\n// console.log statement with \"string interpolation using template literals\".To embed variables directly into the string.\nconsole.log(`Hello, ${place}!`)"
             ],
             "outputs": [
                 {
@@ -50,7 +50,7 @@
         {
             "language": "javascript",
             "source": [
-                "let p = new Date().toDateString()\nconsole.log(p)"
+                "let t1 = Date()\nconsole.log(t1)\n\nlet t2 = new Date()\nconsole.log(t2)\n\nlet t3 = new Date().toDateString()\nconsole.log(t3)\n\nlet t4 = new Date().toLocaleDateString()\nconsole.log(t4)"
             ],
             "outputs": [
                 {
@@ -58,7 +58,10 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Fri Aug 30 2024",
+                                "Sat Aug 31 2024 10:48:05 GMT+0530 (India Standard Time)",
+                                "2024-08-31T05:18:05.662Z",
+                                "Sat Aug 31 2024",
+                                "31/8/2024",
                                 ""
                             ]
                         }
@@ -69,7 +72,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Print today's date\nconsole.log(new Date().toDateString())\n\n// Print today's date with a custom format\nlet date = new Date()\nconsole.log(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`)\n"
+                "// Print today's date\nconsole.log(new Date().toDateString())\n\n// Print today's date with a custom format\nlet date = new Date()\nconsole.log(date)\nconsole.log(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}, ${date.getHours()}:${date.getMinutes()}`)\n"
             ],
             "outputs": [
                 {
@@ -77,8 +80,9 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Fri Aug 30 2024",
-                                "2024-8-30",
+                                "Sat Aug 31 2024",
+                                "2024-08-31T05:19:21.404Z",
+                                "2024-8-31, 10:49",
                                 ""
                             ]
                         }
@@ -116,7 +120,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Today is day 30 of the month 7, in the year 2024",
+                                "Today is day 31 of the month 7, in the year 2024",
                                 ""
                             ]
                         }
@@ -276,7 +280,20 @@
             "source": [
                 "// Example 3\n// Destructuring with skipping. In this example, we are skipping the second element in the array.\n// This code may not work in this notebook environment. You can try it in your local environment or an online code editor like https://www.jsplayground.dev/\n\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink'];\n\n// Destructuring with skipping\nlet [firstColor, ,thirdColor] = colors;  //here is , , see\n\nconsole.log(firstColor); // red\nconsole.log(thirdColor); // blue"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Failed to generate code object, Cannot read properties of null (reading 'type')",
+                                "stack": ""
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
