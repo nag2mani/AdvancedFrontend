@@ -58,7 +58,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Tue Aug 27 2024",
+                                "Fri Aug 30 2024",
                                 ""
                             ]
                         }
@@ -77,8 +77,8 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Tue Aug 27 2024",
-                                "2024-8-27",
+                                "Fri Aug 30 2024",
+                                "2024-8-30",
                                 ""
                             ]
                         }
@@ -116,7 +116,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Today is day 27 of the month 7, in the year 2024",
+                                "Today is day 30 of the month 7, in the year 2024",
                                 ""
                             ]
                         }
@@ -276,20 +276,7 @@
             "source": [
                 "// Example 3\n// Destructuring with skipping. In this example, we are skipping the second element in the array.\n// This code may not work in this notebook environment. You can try it in your local environment or an online code editor like https://www.jsplayground.dev/\n\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink'];\n\n// Destructuring with skipping\nlet [firstColor, ,thirdColor] = colors;  //here is , , see\n\nconsole.log(firstColor); // red\nconsole.log(thirdColor); // blue"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.error",
-                            "value": {
-                                "name": "Error",
-                                "message": "Failed to generate code object, Cannot read properties of null (reading 'type')",
-                                "stack": ""
-                            }
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
