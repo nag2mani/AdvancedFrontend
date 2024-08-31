@@ -58,8 +58,8 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Sat Aug 31 2024 11:10:31 GMT+0530 (India Standard Time)",
-                                "2024-08-31T05:40:31.558Z",
+                                "Sat Aug 31 2024 14:19:57 GMT+0530 (India Standard Time)",
+                                "2024-08-31T08:49:57.676Z",
                                 "Sat Aug 31 2024",
                                 "31/8/2024",
                                 ""
@@ -81,8 +81,8 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "Sat Aug 31 2024",
-                                "2024-08-31T05:40:31.573Z",
-                                "2024-8-31, 11:10",
+                                "2024-08-31T08:49:57.690Z",
+                                "2024-8-31, 14:19",
                                 ""
                             ]
                         }
@@ -280,7 +280,20 @@
             "source": [
                 "// Example 3\n// Destructuring with skipping. In this example, we are skipping the second element in the array.\n// This code may not work in this notebook environment. You can try it in your local environment or an online code editor like https://www.jsplayground.dev/\n\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink'];\n\n// Destructuring with skipping\nlet [firstColor, ,thirdColor] = colors;  //here is , , see\n\nconsole.log(firstColor); // red\nconsole.log(thirdColor); // blue"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Failed to generate code object, Cannot read properties of null (reading 'type')",
+                                "stack": ""
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
@@ -744,35 +757,101 @@
             "source": [
                 "// Example 5: Using Arrow Functions with Array Methods\n\nconst numbers = [1, 2, 3, 4, 5];\n\n// map: Creates a new array by applying the arrow function to each element.\nconst doubled = numbers.map(n => n * 2);\nconsole.log(doubled); // Output: [2, 4, 6, 8, 10]\n\n// filter: Creates a new array with elements that pass the test implemented by the arrow function.\nconst evens = numbers.filter(n => n % 2 === 0);\nconsole.log(evens); // Output: [2, 4]\n\n// reduce: Applies the arrow function against an accumulator and each element to reduce the array to a single value.\nconst sum = numbers.reduce((acc, n) => acc + n, 0);\nconsole.log(sum); // Output: 15\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 2, 4, 6, 8, 10 ]",
+                                "[ 2, 4 ]",
+                                "15",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Example 6: Combining Arrow Functions to transform an array\n\nconst numbers = [1, 2, 3, 4, 5];\n\nconst processNumbers = numbers\n  .map(n => n * 3)\n  .filter(n => n % 2 === 0)\n  .reduce((acc, n) => acc + n, 0);\n\nconsole.log(processNumbers);\n\n// Question: What are map, filter and reduce each doing in the above example?"
+                "// Example 6: Combining Arrow Functions to transform an array\n\nconst numbers = [1, 2, 3, 4, 5];\n\nconst processNumbers = numbers.map(n => n * 3).filter(n => n % 2 === 0).reduce((acc, n) => acc + n, 0);\n\nconsole.log(processNumbers);\n\n// Question: What are map, filter and reduce each doing in the above example?"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "18",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 1.a: Convert the following Function Expression to Arrow Functions\n\nconst greet = function(name) {\n    return `Hello, ${name}!`;\n  };\n  \n  console.log(greet('Alice')); \n\n// Your code here to define greet2 as an arrow function\nconsole.log(greet2('Alice'));"
+                "// Exercise 1.a: Convert the following Function Expression to Arrow Functions\n\nconst greet = function(name) {\n    return `Hello, ${name}!`;\n  };\n  \n  console.log(greet('Alice')); \n\n// Your code here to define greet2 as an arrow function\nconst greet2 = name => \"Hello, \" + name +\"!\";\nconsole.log(greet2('Alice'));"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello, Alice!",
+                                "Hello, Alice!",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 1.b: Convert the following Function Expression to Arrow Functions\n\nconst multiply = function(a, b) {\n    return a * b;\n  };\n  \n  console.log(multiply(4, 5));\n\n// Your code here to define multiply2 as an arrow function\nconsole.log(multiply2(4, 5));"
+                "// Exercise 1.b: Convert the following Function Expression to Arrow Functions\n\nconst multiply = function(a, b) {\n    return a * b;\n  };\n  \n  console.log(multiply(4, 5));\n\n// Your code here to define multiply2 as an arrow function\nlet multiply2 = (a, b) => a *b;\nconsole.log(multiply2(4, 51));"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "20",
+                                "204",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 1.c: Convert the following Function Expression to Arrow Functions\n\nconst isEven = function(num) {\n    return num % 2 === 0;\n  };\n  \n  console.log(isEven(4));\n  console.log(isEven(5));\n\n// Your code here to define isEven2 as an arrow function\nconsole.log(isEven2(4));"
+                "// Exercise 1.c: Convert the following Function Expression to Arrow Functions\n\nconst isEven = function(num) {\n    return num % 2 === 0;\n  };\n  \n  console.log(isEven(4));\n  console.log(isEven(5));\n\n// Your code here to define isEven2 as an arrow function\nlet isEven2 = a => a%2===0?true:false;\nconsole.log(isEven2(40));"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "false",
+                                "true",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
@@ -791,7 +870,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Exercise 5: Higher order function with Arrow function\n// repeat is a higher order function that takes a function and a number of times to repeat the function as arguments.\n\nconst repeat = (fn, times) => {\n    for (let i = 0; i < times; i++) {\n      fn();\n    }\n  };\n  \n  const sayHello = () => console.log('Hello!');\n  \n// Write a call to repeat that will log \"Hello!\" 5 times\n// Your code here"
+                "// Exercise 5: Higher order function with Arrow function\n// repeat is a higher order function that takes a function and a number of times to repeat the function as arguments.\n\nconst repeat = (fn, times) => {\n    for (let i = 0; i < times; i++) {\n      fn();\n    }\n  };\n  \n  const sayHello = () => console.log('Hello!');\n  \n// Write a call to repeat that will log \"Hello!\" 5 times\n"
             ],
             "outputs": []
         },
@@ -901,7 +980,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Example 2: Sequential Asynchronous Operations\n\n// In this example, we’ll use async/await to perform a series of asynchronous operations in sequence, such as simulating fetching user data, processing it, and then saving it.\n\n// Simulate fetching user data from an API\nasync function fetchUserData(userId) {\n    console.log('Fetching user data...');\n    return new Promise((resolve) => {\n      setTimeout(() => {\n        resolve({ userId, name: 'John Doe', age: 30 });\n      }, 2000); // Simulate a 2-second delay\n    });\n  }\n  \n// Simulate processing user data\nasync function processUserData(userData) {\n  console.log('Processing user data...');\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      const processedData = { ...userData, processed: true };\n      resolve(processedData);\n    }, 1000); // Simulate a 1-second delay\n  });\n}\n  \n// Simulate saving user data\nasync function saveUserData(processedData) {\n  console.log('Saving user data...');\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve('User data saved successfully!');\n    }, 500); // Simulate a 0.5-second delay\n  });\n}\n  \n// Main function to execute the sequence\nasync function main() {\n  try {\n    // Fetch, process, and save user data in sequence\n    const userData = await fetchUserData(1);\n    console.log('User Data:', userData);\n\n    const processedData = await processUserData(userData);\n    console.log('Processed Data:', processedData);\n\n    const saveMessage = await saveUserData(processedData);\n    console.log(saveMessage);\n  } catch (error) {\n    console.error('An error occurred:', error);\n  }\n}\n  \n// Call the main function\nmain();"
+                "//Example 2: Sequential Asynchronous Operations\n\n// In this example, we’ll use async/await to perform a series of asynchronous operations in sequence, such as simulating fetching user data, processing it, and then saving it.\n\n// Simulate fetching user data from an API\nasync function fetchUserData(userId) {\n    console.log('Fetching user data...');\n    return new Promise((resolve) => {\n      setTimeout(() => {\n        resolve({ userId, name: 'John Doe', age: 30 });\n      }, 2000); // Simulate a 2-second delay\n    });\n  }\n  \n// Simulate processing user data\nasync function processUserData(userData) {\n  console.log('Processing user data...');\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      const processedData = { ...userData, processed: true };\n      resolve(processedData);\n    }, 1000); // Simulate a 1-second delay\n  });\n}\n\n// Simulate saving user data\nasync function saveUserData(processedData) {\n  console.log('Saving user data...');\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve('User data saved successfully!');\n    }, 500); // Simulate a 0.5-second delay\n  });\n}\n  \n// Main function to execute the sequence\nasync function main() {\n  try {\n    // Fetch, process, and save user data in sequence\n    const userData = await fetchUserData(1);\n    console.log('User Data:', userData);\n\n    const processedData = await processUserData(userData);\n    console.log('Processed Data:', processedData);\n\n    const saveMessage = await saveUserData(processedData);\n    console.log(saveMessage);\n  } catch (error) {\n    console.error('An error occurred:', error);\n  }\n}\n  \n// Call the main function\nmain();"
             ],
             "outputs": []
         },
@@ -915,28 +994,65 @@
         {
             "language": "javascript",
             "source": [
-                "// Homework 1: Print the current time in the format \"The time is 12:30:15\"\n "
+                "// Homework 1: Print the current time in the format \"The time is 12:30:15\"\n\nlet date = new Date()\nconsole.log(`The time is ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "The time is 14:13:54",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Homework 2: Print the today's date in the format \"Today is 24th December 2020\". Make sure the date is displayed in the correct ordinal format (e.g. 1st, 2nd, 3rd, 4th, 5th, etc.)"
+                "// Homework 2: Print the today's date in the format \"Today is 24th December 2020\". Make sure the date is displayed in the correct ordinal format (e.g. 1st, 2nd, 3rd, 4th, 5th, etc.)\n\nlet date = new Date()\n\nconst months = [\n    \"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\n    \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"\n  ];\n\nconsole.log(`Today is ${date.getDay()}th ${months[date.getMonth()]} ${date.getFullYear()}`)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Today is 6th August 2024",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Homework 3: Write a function called greet that takes a name as an argument and returns a greeting message. The function should use a default value of \"World\" for the name parameter if no argument is provided."
+                "// Homework 3: Write a function called greet that takes a name as an argument and returns a greeting message. The function should use a default value of \"World\" for the name parameter if no argument is provided.\n\n// let greet3 = name => \"Hello \" + name;\nlet greet3 = function(name){\n    if (name===undefined){\n        return \"Hello World\";\n    }\n    else{\n        return \"Hello \"+name;\n    }\n}\n\nconsole.log(greet3())\nconsole.log(greet3(\"Nagmani\"))"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello World",
+                                "Hello Nagmani",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Homework 4: Write a function to flatten an array using the rest/spread syntax and recursive function call"
+                "// Homework 4: Write a function to flatten an array using the rest/spread syntax and recursive function call\n\n"
             ],
             "outputs": []
         },
