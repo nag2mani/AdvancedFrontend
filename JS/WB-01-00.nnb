@@ -280,20 +280,7 @@
             "source": [
                 "// Example 3\n// Destructuring with skipping. In this example, we are skipping the second element in the array.\n// This code may not work in this notebook environment. You can try it in your local environment or an online code editor like https://www.jsplayground.dev/\n\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink'];\n\n// Destructuring with skipping\nlet [firstColor, ,thirdColor] = colors;  //here is , , see\n\nconsole.log(firstColor); // red\nconsole.log(thirdColor); // blue"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.error",
-                            "value": {
-                                "name": "Error",
-                                "message": "Failed to generate code object, Cannot read properties of null (reading 'type')",
-                                "stack": ""
-                            }
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
@@ -381,20 +368,7 @@
             "source": [
                 "// Exercise 4: Destructure the list of colors to get the first and last color\nlet colors = ['red', 'green', 'blue', 'yellow', 'pink']\n\nlet [f, , , ,s] = colors;\n\nconsole.log(f)"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.error",
-                            "value": {
-                                "name": "Error",
-                                "message": "Failed to generate code object, Cannot read properties of null (reading 'type')",
-                                "stack": ""
-                            }
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "markdown",
@@ -580,7 +554,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 1: Using rest parameters in functions for variable number of arguments\n\nfunction count(...numbers) {\n    console.log(numbers);\n    let sum =0\n    for (let i of numbers){\n        //this is for of loop.\n        sum = sum + i\n    }\n    return sum;   // Using the length property to return the number of arguments\n}\n\nconsole.log(count(1, 2, 3)); \n\nconsole.log(count(1, 2, 3, 4));"
+                "// Example 1: Using rest parameters in functions for variable number of arguments\n\nfunction count(...numbers) {\n    console.log(numbers);\n    let sum =0\n    for (let i of numbers){\n        //this is for of loop.\n        sum = sum + i\n    }\n    console.log(numbers.length)\n    return sum;   // Using the length property to return the number of arguments\n}\n\nconsole.log(count(1, 2, 3)); \n\nconsole.log(count(1, 2, 3, 4,5));"
             ],
             "outputs": [
                 {
@@ -589,9 +563,11 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "[ 1, 2, 3 ]",
+                                "3",
                                 "6",
-                                "[ 1, 2, 3, 4 ]",
-                                "10",
+                                "[ 1, 2, 3, 4, 5 ]",
+                                "5",
+                                "15",
                                 ""
                             ]
                         }
@@ -630,21 +606,46 @@
         {
             "language": "javascript",
             "source": [
-                "// Exercise 1: \n// 1. Create an array called numbers containing numbers 1 through 5.\n// 2. Use destructuring and the rest syntax to assign the first element to a variable called first and the rest of the elements to a variable called restOfNumbers.\n\n// Your code here"
+                "// Exercise 1: \n// 1. Create an array called numbers containing numbers 1 through 5.\n// 2. Use destructuring and the rest syntax to assign the first element to a variable called first and the rest of the elements to a variable called restOfNumbers.\n\nlet numbers = [1,2,3,4,5];\nlet [first, ...restOfNumbers] = numbers;\n\nconsole.log(first);\nconsole.log(restOfNumbers);"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1",
+                                "[ 2, 3, 4, 5 ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 2: Exercise 3: Using Rest Syntax in Function Parameters\n// Write a function called sum that takes any number of arguments and returns their sum. Use the rest syntax to collect the arguments.\n\n// Your code here"
+                "// Exercise 2: Using Rest Syntax in Function Parameters\n// Write a function called sum that takes any number of arguments and returns their sum. Use the rest syntax to collect the arguments.\n\nfunction sum(...params) {\n    sum = 0;\n    for (let num of params){\n        sum += num\n    }\n    return sum\n}\n\n// console.log(sum(12,23))\n// console.log(sum(120,230,100,300))\nconsole.log(sum(1,2,3,4,5,6,7,8,9,10))"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "55",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
             "source": [
-                "// Exercise 3: Nested Destructuring with Rest/Spread Syntax to flatten an array\n// 1. Create an array numbers1 with values [1, 2, [3, 4]].\n// 2. Use spread syntax to create a new array flatNumbers that flattens numbers1 by one level (so the result should be [1, 2, 3, 4]).\n// 3. Try different values in numbers1 to test your code. Ex. [ [1, 2], 3, [4, 5]], [1, [2, 3] , [4, 5] ]"
+                "// Exercise 3: Nested Destructuring with Rest/Spread Syntax to flatten an array\n// 1. Create an array numbers1 with values [1, 2, [3, 4]].\n// 2. Use spread syntax to create a new array flatNumbers that flattens numbers1 by one level (so the result should be [1, 2, 3, 4]).\n// 3. Try different values in numbers1 to test your code. Ex. [ [1, 2], 3, [4, 5]], [1, [2, 3] , [4, 5] ]\n\nlet number1 = [1,2,[3,4]]\nflatNumbers\n"
             ],
             "outputs": []
         },
