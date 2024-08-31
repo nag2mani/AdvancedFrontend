@@ -58,8 +58,8 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "Sat Aug 31 2024 10:48:05 GMT+0530 (India Standard Time)",
-                                "2024-08-31T05:18:05.662Z",
+                                "Sat Aug 31 2024 11:10:31 GMT+0530 (India Standard Time)",
+                                "2024-08-31T05:40:31.558Z",
                                 "Sat Aug 31 2024",
                                 "31/8/2024",
                                 ""
@@ -81,8 +81,8 @@
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
                                 "Sat Aug 31 2024",
-                                "2024-08-31T05:19:21.404Z",
-                                "2024-8-31, 10:49",
+                                "2024-08-31T05:40:31.573Z",
+                                "2024-8-31, 11:10",
                                 ""
                             ]
                         }
@@ -233,7 +233,7 @@
         {
             "language": "markdown",
             "source": [
-                "#### Destructuring"
+                "#### Destructuring :\n\n##### To destroy the structure of something.\n\n**It is a JavaScript feature that allows you to extract values from objects or arrays and assign them to variables.**"
             ],
             "outputs": []
         },
@@ -259,7 +259,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 2\nconst numbers = [1, 2, 5, 15, 1]\nconst [first, second, third] = numbers\nconsole.log(third)"
+                "// Example 2\nconst numbers = [1, 2, 225, 15, 1]\nlet [first, second, third] = numbers\nconsole.log(third)"
             ],
             "outputs": [
                 {
@@ -267,7 +267,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "5",
+                                "225",
                                 ""
                             ]
                         }
@@ -298,7 +298,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 4\n\nlet data = {\n    name: 'John Doe',\n    age: 30,\n    contact: {\n      email: 'john.doe@example.com',\n      phone: '123-456-7890',\n    },\n    hobbies: ['reading', 'gaming', 'coding'],\n  };\n  \n  // Destructuring\n  let { name, contact: { email, phone }, hobbies: [hobby1, hobby2] } = data;\n  \n  console.log(name); \n  console.log(email);\n  console.log(phone);\n  console.log(hobby1);\n  console.log(hobby2);\n\n  // You can also get email directly from data object by using data.contact.email\n  console.log(data.contact.email)"
+                "// Example 4\n\nlet data = {\n    name: 'John Doe',\n    age: 30,\n    contact: {\n      email: 'john.doe@example.com',\n      phone: '123-456-7890',\n    },\n    hobbies: ['reading', 'gaming', 'coding'],\n  };\n  \n  // Destructuring\n  // let { name, contact: { email, phone }, hobbies: [hobby1, hobby2] } = data;\n  let { contact: { email, phone }, hobbies: [hobby1, hobby2] } = data;\n  // let { hobbies: [hobby1, hobby2] } = data;\n  \n  console.log(name); \n  console.log(email);\n  console.log(phone);\n  console.log(hobby1);\n  console.log(hobby2);\n\n  // You can also get email directly from data object by using data.contact.email\n  console.log(data.contact.email)"
             ],
             "outputs": [
                 {
@@ -360,7 +360,7 @@
         {
             "language": "javascript",
             "source": [
-                "// Exercise 3: Destructure the following object to print Hello, John Doe! I have sent you an email at joh.doe@example.com\nlet person = { firstName: \"John\", lastName: \"Doe\", email: \"john.doe@example.com\" }\n// console.log(person.firstName)\nlet{firstName, lastName, email} = person;\nconsole.log(\"Hello,\",firstName,lastName, \"I have sent you an email at\", email)"
+                "// Exercise 3: Destructure the following object to print Hello, John Doe! I have sent you an email at joh.doe@example.com\nlet person = { firstName: \"John\", lastName: \"Doe\", email: \"john.doe@example.com\" }\n\n// console.log(person.firstName)\nlet{firstName, lastName, email} = person;\nconsole.log(\"Hello,\",firstName,lastName, \"I have sent you an email at\", email)"
             ],
             "outputs": [
                 {
@@ -580,9 +580,24 @@
         {
             "language": "javascript",
             "source": [
-                "// Example 1: Using rest parameters in functions for variable number of arguments\n\nfunction count(...numbers) {\n    console.log(numbers);\n    return numbers.length;   // Using the length property to return the number of arguments\n}\n\nconsole.log(sum(1, 2, 3)); \n\nconsole.log(sum(1, 2, 3, 4));"
+                "// Example 1: Using rest parameters in functions for variable number of arguments\n\nfunction count(...numbers) {\n    console.log(numbers);\n    let sum =0\n    for (let i of numbers){\n        //this is for of loop.\n        sum = sum + i\n    }\n    return sum;   // Using the length property to return the number of arguments\n}\n\nconsole.log(count(1, 2, 3)); \n\nconsole.log(count(1, 2, 3, 4));"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 1, 2, 3 ]",
+                                "6",
+                                "[ 1, 2, 3, 4 ]",
+                                "10",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "javascript",
