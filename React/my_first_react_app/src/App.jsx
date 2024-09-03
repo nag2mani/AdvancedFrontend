@@ -1,13 +1,23 @@
-import { useState } from 'react';
 import './App.css';
+import ToggleButton  from './ToggleButton';
 
 //it is function comp but there is class comp.
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <h1>Hello Nagmani</h1>
+    <>
+      <div>
+        <h1>Hello World</h1>
+      </div>
+      <div>
+        <h2>I am Nagmani & This is my first react app.</h2>
+      </div>
+      <div className="App">
+        <h1>Toggle Button Example</h1>
+        <ToggleButton />
+      </div>
+    </>
   )
+
 }
 
 export default App
