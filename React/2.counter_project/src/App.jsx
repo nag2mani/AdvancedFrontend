@@ -1,6 +1,6 @@
 import './App.css'
+import DisplayComponent from 
 import {useState} from "react";
-
 
 function App() {
   // let count = 10;
@@ -20,11 +20,11 @@ function App() {
     <>
     <h1>Counter Project</h1>
     <button onClick={increment}>Add</button>
-    <h2>{count}</h2>
+    <DisplayComponent count={count}>
     <button onClick={decrement}>Sub</button>
     </>
   )
   
 }
 
-export default App
+export default App;
