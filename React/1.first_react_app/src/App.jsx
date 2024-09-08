@@ -1,20 +1,23 @@
 import './App.css';
-import ToggleButton  from './ToggleButton';
+import ToggleButton from './ToggleButton';
 
-//it is function comp but there is class comp.
+//It is functional comp but there is class component as well.
 function App() {
   return (
     <>
       <div>
         <h1>Hello World</h1>
       </div>
+
       <div>
         <h2>I am Nagmani & This is my first react app.</h2>
       </div>
-      <div className="App">
-        <h1>Toggle Button Example</h1>
-        <ToggleButton />
+
+      <div className="ToggleButton">
+        <h3>This is Example of Toggle Button.</h3>
+        <ToggleButton/>
       </div>
+
     </>
   )
 
