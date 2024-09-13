@@ -1,39 +1,37 @@
-import React, { useState } from 'react';
+// src/App.jsx
+import { useState } from 'react';
 import ButtonComponent from './components/ButtonComponent';
 import ScreenComponent from './components/ScreenComponent';
 import './index.css';
 
 const App = () => {
-  const [input, setInput] = useState(''); // To handle user input
-  const [result, setResult] = useState(''); // To handle the result
+  const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
 
-  const handleClick = (label) => {
-    if (label === '=') {
+  const handleClick = (value) => {
+    if (value === 'C') {
+      setInput('');
+      setResult('');
+    } else if (value === '=') {
       try {
-        // Only evaluate if there's valid input
-        if (input.trim() !== '') {
-          const calculatedResult = eval(input); // Evaluate the input
-          setResult(calculatedResult);
-        } else {
-          setResult('Error');
-        }
+        setResult(eval(input));
+      // eslint-disable-next-line no-unused-vars
       } catch (error) {
         setResult('Error');
       }
-    } else if (label === 'C') {
-      setInput(''); // Clear the input
-      setResult(null);
     } else {
-      setInput((prev) => prev + label); // Concatenate the input
+      setInput((prev) => prev + value);
     }
   };
 
+  const buttons = ['1', '2', '3', '+', '4', '5', '6', '-', '7', '8', '9', '*', 'C', '0', '=', '/'];
+
   return (
-    <div className="calculator">
-      <ScreenComponent value={input || result || '0'} />
-      <div className="buttons">
-        {['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', '+', '-', '*', '/', '=', 'C'].map((btn) => (
-          <ButtonComponent key={btn} label={btn} handleClick={handleClick} />
+    <div className="app">
+      <ScreenComponent value={result || input || "0"} />
+      <div className="button-grid">
+        {buttons.map((btn, index) => (
+          <ButtonComponent key={index} label={btn} handleClick={handleClick} />
         ))}
       </div>
     </div>

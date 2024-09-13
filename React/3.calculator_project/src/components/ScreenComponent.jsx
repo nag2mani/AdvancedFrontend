@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ScreenComponent = ({ value }) => {
   return (
     <div className="screen">
