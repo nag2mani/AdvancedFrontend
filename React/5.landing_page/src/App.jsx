@@ -5,6 +5,7 @@ import Heading from './components/Heading';
 import Profile from './components/Profile';
 import TestimonialCarousel from './components/TestimonialCarousel';
 import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Profile/>
     <TestimonialCarousel/>
     <FAQ/>
+    <Footer/>
     </>
   )
 }
