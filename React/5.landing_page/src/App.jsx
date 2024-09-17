@@ -1,7 +1,10 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import Heading from './components/Heading';
 import Profile from './components/Profile';
+import TestimonialCarousel from './components/TestimonialCarousel';
+import FAQ from './components/FAQ';
 
 function App() {
   return (
@@ -9,6 +12,8 @@ function App() {
     <Navbar/>
     <Heading/>
     <Profile/>
+    <TestimonialCarousel/>
+    <FAQ/>
     </>
   )
 }
