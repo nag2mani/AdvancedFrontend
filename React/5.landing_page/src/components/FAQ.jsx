@@ -1,7 +1,6 @@
 import React from 'react';
 import { Accordion, Card, Button } from 'react-bootstrap';
 
-
 const FAQ = () => {
   return (
     <Accordion defaultActiveKey="0">

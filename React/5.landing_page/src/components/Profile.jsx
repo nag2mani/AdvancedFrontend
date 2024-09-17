@@ -5,7 +5,7 @@ function Profile() {
         <div className="container container-while">
             <div className="row">
                 <div className="col">
-                    <img src={new URL('../assets/img1.png', import.meta.url).href} alt="Profile" />
+                    <img src={new URL('../assets/image.png', import.meta.url).href} alt="Profile" />
                 </div>
                 <div className="col">
                     <div class="card">
