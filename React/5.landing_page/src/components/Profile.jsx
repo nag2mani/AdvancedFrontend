@@ -1,24 +1,19 @@
-import React from 'react'
+import React from 'react';
+import './style.css';
 
 function Profile() {
     return (
-        <div className="container container-while">
-            <div className="row">
-                <div className="col">
-                    <img src={new URL('../assets/image.png', import.meta.url).href} alt="Profile" />
-                </div>
-                <div className="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className='info-component'>
+          <div className='info-left'>
+            <img src="src\assets\image.png" alt="" />
+          </div>
+          <div className='info-right'>
+            <b>Hello!</b>
+            <p className='para'>I am a web developer from India, I build websites & write code which make money for client</p>
+            <button className='info-btn'>Contact</button>
+          </div>
         </div>
-    );
+      );
 }
 
 export default Profile;

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import './style.css';
 
 const TestimonialCarousel = () => {
   return (
     <Carousel interval={null}>
       <Carousel.Item>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center ccl">
           <blockquote className="blockquote text-center">
             <p className="mb-0">
               "I had a wonderful time working with Kartik; his flexibility, knowledge of human behavior, and UX design are remarkable and an asset for any client."
