@@ -1,9 +1,9 @@
+import './Components/CustomStyles.css';
 import React, { useState } from 'react';
 import Screen from './Components/Screen';
-import UserInput from './Components/UserInput';
 import Sidebar from './Components/Sidebar';
+import UserInput from './Components/UserInput';
 import BotTransformations from './Components/BotTransformations';
-import './Components/CustomStyles.css';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
