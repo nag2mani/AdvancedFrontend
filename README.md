@@ -42,4 +42,3 @@ The goal of this repository is to serve as a learning hub for frontend developer
 
 Stay up to date with the latest in frontend development and keep pushing your coding limits!
 
-Happy Coding! 🎉
