@@ -1,7 +1,6 @@
 import './App.css'
 import { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import useFetch from './useFetch';
 import Navbar from './assets/Navbar';
 
 function App() {
