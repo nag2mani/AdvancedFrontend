@@ -8,20 +8,31 @@ import TestimonialCarousel from './components/TestimonialCarousel';
 import FAQ from './components/FAQ';
 import InterestedInMe from './components/InterestedInMe';
 import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <>
-    <Navbar/>
-    <Heading/>
-    <Profile/>
-    <Projects/>
-    <TestimonialCarousel/>
-    <FAQ/>
-    <InterestedInMe/>
-    <Footer/>
-    </>
-  )
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Heading />
+              <Profile />
+              <Projects />
+              <TestimonialCarousel />
+              <FAQ />
+              <InterestedInMe />
+              <Footer />
+            </>
+          }/>
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
