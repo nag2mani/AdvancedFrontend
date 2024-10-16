@@ -11,7 +11,6 @@ export function Home() {
 
   return (
     <>
-      {/* Show the submit form to logged in users. */}
       {user.current ? (
         <section>
           <h2>Submit Idea</h2>
