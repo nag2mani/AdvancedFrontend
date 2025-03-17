@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-mongoose.connect("mongodb+srv://nag2mani:2JSX6Ot5571rSKfj@cluster0.ldyso.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("")
   .then(() => {
     app.listen(port, () => {
       console.log(`Connected to Database & app listening on port ${port}`);
