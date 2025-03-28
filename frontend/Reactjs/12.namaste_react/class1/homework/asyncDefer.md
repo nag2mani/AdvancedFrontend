@@ -76,6 +76,9 @@ In HTML, the `async` and `defer` attributes are used with the `<script>` tag to 
 
 ---
 
+![image](https://github.com/user-attachments/assets/82b1417a-1196-4f4c-86d2-26aa65023776)
+
+
 ## 🔥 **In Short:**  
 - Use **`async`** for independent scripts (like Google Analytics).  
 - Use **`defer`** for scripts that rely on DOM elements or other scripts (like UI or framework code).  
