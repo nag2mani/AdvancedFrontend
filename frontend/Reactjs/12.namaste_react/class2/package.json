@@ -1,0 +1,25 @@
+{
+  "name": "class2",
+  "version": "1.0.0",
+  "description": "first react app from scratch",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Nagmani",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nag2mani/AdvancedFrontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nag2mani/AdvancedFrontend/issues"
+  },
+  "homepage": "https://github.com/nag2mani/AdvancedFrontend#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
